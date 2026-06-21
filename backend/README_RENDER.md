@@ -63,3 +63,6 @@ private static final String BACKEND_BASE_URL = "https://mannal-smart-farm-backen
 ## 6. 무료 플랜 주의사항
 
 무료 Web Service는 일정 시간 요청이 없으면 sleep 상태가 될 수 있어 첫 요청이 느릴 수 있습니다. 로컬 SQLite와 cache 파일은 재배포 또는 재시작 때 유지되지 않을 수 있으므로 지속 운영에는 영구 디스크나 별도 관리형 데이터베이스를 검토합니다.
+## SQLite 배포 의존성
+
+현재 Render 무료 배포는 SQLite DATABASE_URL 기준이므로 psycopg 의존성은 사용하지 않습니다. PostgreSQL로 전환할 때만 psycopg를 다시 추가합니다.
