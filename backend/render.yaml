@@ -1,0 +1,21 @@
+services:
+  - type: web
+    name: mannal-smart-farm-backend
+    runtime: python
+    plan: free
+    rootDir: backend
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn app.main:app --host 0.0.0.0 --port $PORT
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.11.9
+      - key: USE_DUMMY_DATA
+        value: "false"
+      - key: DATABASE_URL
+        value: sqlite:///./market_dashboard.db
+      - key: KAMIS_API_KEY
+        sync: false
+      - key: KAMIS_USER_ID
+        sync: false
+      - key: KMA_API_KEY
+        sync: false

@@ -12,6 +12,10 @@ venv/
 node_modules/
 dist/
 build/
+backend/cache/
+backend/*.log
+android_app/out/
+*.apk
 .DS_Store
 npm-debug.log*
 yarn-debug.log*
